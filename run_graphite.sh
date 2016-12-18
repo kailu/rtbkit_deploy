@@ -2,7 +2,7 @@ sudo mkdir -vp /storage/docker/graphite
 #sudo touch /storage/docker/graphite/index
 
 sudo docker run \
-  -d \
+  -d --net=host \
   -v /storage/docker/graphite/data:/opt/graphite/storage/whisper \
   -v /storage/docker/graphite/index:/opt/graphite/index \
   -v /storage/docker/graphite/log:/var/log \
