@@ -5,9 +5,9 @@ FROM ubuntu:14.04.2
 ENV DEBIAN_FRONTEND noninteractive
 
 #uncomment this line if you are building the image from China...
-COPY sources.list /etc/apt/sources.list
+#COPY sources.list /etc/apt/sources.list
 #for in China only
-COPY hosts /etc/hosts
+#COPY hosts /etc/hosts
 
 RUN apt-get update \
 		       && apt-get install -y linux-tools-generic libbz2-dev python-dev scons\
